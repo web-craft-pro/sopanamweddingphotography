@@ -1,0 +1,103 @@
+/*For the portfolio page styling*/
+/* =========================
+   COUPLE IMAGE COLLECTION
+========================= */
+
+.couple-gallery {
+    background-color: white;
+}
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .gallery-grid img {
+        height: 200px;
+    }
+}
+
+/* =========================
+   MASONRY GALLERY (COUPLE)
+========================= */
+
+.masonry-gallery {
+    background-color: white;
+}
+
+.masonry-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+.masonry-grid img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    break-inside: avoid;
+    transition: transform 0.3s ease;
+}
+
+.masonry-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 6px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 36px;
+    color: #ffffff;
+    cursor: pointer;
+}

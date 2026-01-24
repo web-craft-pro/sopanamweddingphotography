@@ -1,0 +1,170 @@
+/* =========================
+   ABOUT – EDITORIAL LAYOUT
+========================= */
+
+.about-editorial {
+    background-color: white; /* soft sepia tone */
+}
+
+.about-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Founder Image */
+.about-image img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Content */
+.about-content h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-intro {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+}
+
+/* =========================
+   CLOSING INVITATION
+========================= */
+
+.about-invitation {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background-color: white;
+}
+
+.about-invitation p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--deep-wine);
+}
+
+/* Button */
+.about-cta-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border: 1px solid var(--deep-wine);
+    text-decoration: none;
+    color: var(--deep-wine);
+
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.about-cta-btn:hover {
+    background-color: black;
+    color: #ffffff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-image img {
+        max-height: 380px;
+        object-fit: cover;
+    }
+}
+
+/* =========================
+   ABOUT – SLIDESHOW LAYOUT
+========================= */
+
+.about-slideshow-section {
+    background-color: white;
+}
+
+.about-slideshow-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+/* Slideshow */
+.about-slideshow {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.about-slideshow img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.about-slideshow img.active {
+    opacity: 1;
+}
+
+/* Text */
+.about-text-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.about-text-content p {
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-slideshow-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-slideshow {
+        height: 300px;
+    }
+
+    .about-text-content {
+        text-align: center;
+    }
+}
