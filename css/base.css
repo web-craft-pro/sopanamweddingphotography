@@ -1,0 +1,85 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent Bootstrap overriding custom styles */
+body {
+    --bs-body-font-family: 'Lato', sans-serif;
+}
+
+/* =========================
+   COLOR PALETTE
+========================= */
+:root {
+    --white: #FFFFFF;
+    --ivory-cream: #FFF8F0;
+    --taupe-whisper: #F5F3F0;
+    --rose-gold: #FFE4E1;
+    --sage-drift: #F0F9F0;
+    --plum: #6D3C52;
+    --deep-wine: #4B2138;
+    --text-dark: #2D222F;
+    font-size: 16px; /* Base for rem */
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem; /* 16px base */
+    line-height: 1.8;
+    background-color: white;
+    color: var(--text-dark);
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+}
+
+/* Images global responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove inline gaps */
+}
+
+/* =========================
+   SECTION BASE
+========================= */
+section:not(.hero) {
+    padding: 5rem 3.75rem; /* 80px 60px in rem */
+}
+
+h2 {
+    font-size: 2.25rem; /* 36px */
+    margin-bottom: 2.5rem; /* 40px */
+    color: black;
+}
+
+/* =========================
+   FIX FOR FIXED NAVBAR OVERLAP
+========================= 
+
+body {
+    padding-top: 80px;  must match navbar height 
+}
+*/
+
+/* =========================
+   FIX FOR FIXED NAVBAR OVERLAP
+   (INNER PAGES ONLY)
+========================= */
+
+body:not(.home-page) {
+    padding-top: 80px; /* must match navbar height */
+}

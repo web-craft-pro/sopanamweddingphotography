@@ -1,0 +1,407 @@
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    section:not(.hero) {
+        padding: 3.75rem 1.25rem; /* 60px 20px */
+    }
+
+    h2 {
+        font-size: 1.75rem; /* 28px */
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+
+    /* Trust */
+    .trust-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat h3 {
+        font-size: 2.5rem;
+    }
+
+    .stat p {
+        max-width: 100%;
+    }
+
+    .script-tagline {
+        font-size: 30px;
+    }
+
+    /* About */
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+
+    /* Editorial Portfolio */
+    .editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .ep-column {
+        gap: 3rem;
+    }
+
+    .ep-feature {
+        order: -1;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        padding: 0 20px 40px;
+        text-align: center;
+    }
+
+    /* Social Icons */
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social-icons a i {
+        font-size: 15px;
+    }
+
+    /* Homepage portfolio heading */
+    .home-portfolio.editorial-portfolio h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* =========================
+   DESKTOP ONLY
+========================= */
+
+@media (min-width: 992px) {
+    .hero {
+        height: 100vh;
+    }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 0.625rem 0.9375rem;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-quote {
+        font-size: 1.125rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trend-card {
+        min-width: 220px;
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+    }
+}
+/*@media (max-width: 768px) {
+    .hero {
+        padding-top: 80px;
+    }
+}
+*/
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 64px; /* exactly navbar height */
+    }
+}
+/* =========================================
+   EDITORIAL INTRO – MOBILE FIX (PROBLEM 2)
+========================================= */
+
+@media (max-width: 768px) {
+    .editorial-intro-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .editorial-divider {
+        display: none;
+    }
+
+    .editorial-left,
+    .editorial-right {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* =========================================
+   EDITORIAL LEFT – MOBILE FONT SIZE REDUCE
+========================================= */
+@media (max-width: 768px) {
+    .editorial-left h2 {
+        font-size: 1.8rem;   /* reduced from desktop */
+        line-height: 1.35;
+        letter-spacing: 1.5px;
+    }
+}
+/* =========================================
+   MOBILE LOGO – MOVE SLIGHTLY LEFT
+========================================= */
+@media (max-width: 768px) {
+    .navbar .logo {
+        margin-left: -40px; /* adjust: -4px to -10px if needed */
+    }
+}
+/* =========================================
+   PORTFOLIO PAGE – MOBILE PROFESSIONAL LAYOUT
+========================================= */
+@media (max-width: 768px) {
+
+    /* Portfolio container */
+    .portfolio-page {
+        padding-top: 1.5rem;   /* tighter spacing */
+    }
+
+    /* Grid becomes single column */
+    .portfolio-grid-editorial {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+
+    /* Portfolio item */
+    .portfolio-item {
+        text-align: center;
+    }
+
+    /* Image styling */
+    .portfolio-item img {
+        height: 260px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    /* Couple name */
+    .portfolio-item h3 {
+        margin-top: 1rem;
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    /* Category text */
+    .portfolio-item span {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* =========================
+   PORTFOLIO HERO GAP FIX (GLOBAL)
+========================= */
+
+.portfolio-hero {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.portfolio-page {
+    padding-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .portfolio-hero {
+        padding-bottom: 0.5rem !important;
+    }
+
+    .portfolio-page {
+        padding-top: 0 !important;
+    }
+}
+/*Service Page Rework*/
+@media (max-width: 768px) {
+    .services-intro h1 {
+        font-size: 2.1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2.8rem;
+    }
+
+    .service-card img {
+        height: 220px;
+    }
+}
+
+/* =========================
+   SERVICES – MOBILE LAYOUT
+========================= */
+
+@media (max-width: 768px) {
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr;   /* 🔹 one card per row */
+        gap: 24px;
+        padding: 0;
+    }
+
+    .service-card {
+        padding: 28px 22px;
+        text-align: center;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .service-card p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        opacity: 0.9;
+    }
+
+    .service-card a,
+    .service-card .service-btn {
+        margin-top: 14px;
+        display: inline-block;
+    }
+}
+@media (max-width: 768px) {
+    .service-card {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+}
+@media (max-width: 768px) {
+    .services-page,
+    .services-editorial {
+        padding-top: 100px;
+    }
+}
+
+/*Navbar and page content spacing of inner pages of both desktop and smart phone.*/
+@media (max-width: 768px) {
+    body:not(.home-page) {
+        padding-top: 64px;
+    }
+}
+
+/* Contact Button In Home Page */
+@media (max-width: 768px) {
+    .booking-text {
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+
+    .booking-btn {
+        padding: 12px 28px;
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 768px) {
+    .booking-btn {
+        padding: 10px 30px;
+        font-size: 0.7rem;
+        letter-spacing: 2.5px;
+    }
+}
+
+/* Kerala Paragraph in the About Page */
+@media (max-width: 768px) {
+
+    .about-seo {
+        padding: 3.5rem 1.25rem;
+    }
+
+    .about-seo-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .about-seo-divider {
+        display: none;
+    }
+
+    .about-seo-heading h2 {
+        font-size: 2rem;
+    }
+
+    .about-seo-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+/* For Contact Page Keywords */
+@media (max-width: 768px) {
+
+    .contact-seo {
+        padding: 3.5rem 1.25rem;
+    }
+
+    .contact-seo-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .contact-seo-divider {
+        display: none;
+    }
+
+    .contact-seo-heading h2 {
+        font-size: 2rem;
+    }
+
+    .contact-seo-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+/* Hero Quote*/
+@media (max-width: 768px) {
+    .hero-quote {
+        font-size: 2.0rem;
+        line-height: 1.35;
+        padding: 0 12px;
+    }
+}

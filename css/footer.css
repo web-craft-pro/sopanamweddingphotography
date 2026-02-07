@@ -1,0 +1,90 @@
+/* =========================
+   FOOTER – MODERN
+========================= */
+.site-footer {
+    background: linear-gradient(to right, #000000, #000000);
+    color: #FADCD5;
+    padding-top: 70px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    padding: 0 60px 50px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 18px;
+}
+
+.footer-column p,
+.footer-column li {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #FADCD5;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 22px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 13px;
+}
+
+/* =========================
+   FOOTER SOCIAL ICONS
+========================= */
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+
+    text-decoration: none;
+    background-color: transparent;
+
+    transition: all 0.3s ease;
+}
+
+.social-icons a i {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hover effect */
+.social-icons a:hover {
+    background-color: #ffffff;
+}
+
+.social-icons a:hover i {
+    color: #000000;
+}

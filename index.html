@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Allura&family=Alex+Brush&family=Parisienne&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -24,7 +25,16 @@
     rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/floating.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/mobile-nav.css">
+<link rel="stylesheet" href="css/responsive.css">
+
     
 </head>
 <body class="home-page"> <!--IF THE TRANSPERANT NAVBAR IS NOT NEEDED CHANGE THE <body class="home-page"> INTO <BODY>-->
@@ -73,10 +83,9 @@
     </div>
 
     <div class="hero-quote-only reveal reveal-slow">
-        <blockquote class="hero-quote">
-            “The painter constructs, the photographer discloses.”
-            <span>— Susan Sontag</span>
-        </blockquote>
+        <div class="hero-quote">
+            Where forever begins!
+        </div>
     </div>
 </section>
 
@@ -112,7 +121,7 @@
 
 <!-- PORTFOLIO PREVIEW -->
 <section class="home-portfolio editorial-portfolio">
-    <h2>Our Recenct works</h2>
+    <h2>Our Recenct Works</h2>
     
 
     <div class="editorial-grid">
@@ -156,7 +165,7 @@
 
     <!-- CTA -->
     <div class="portfolio-cta">
-        <a href="portfolio.html" class="square-btn">View Full Portfolio</a>
+        <a href="portfolio.html" class="square-btn">View More</a>
     </div>
 </section>
 
@@ -201,6 +210,16 @@
     </div>
 </section>
 
+<!-- Button leads to Contact Page -->
+<section class="home-booking-cta">
+    <p class="booking-text">
+        Now accepting a limited number of wedding stories for the upcoming season.
+    </p>
+
+    <a href="contact.html" class="booking-btn">
+        Enquire Availability
+    </a>
+</section>
 
 
 <!-- TRENDING REELS -->
@@ -222,6 +241,16 @@
       <img src="images/bride4.jpg" alt="">
       <span>Bridal Details</span>
     </div>
+
+    <div class="trend-card">
+      <img src="images/prewedding.jpg" alt="">
+      <span>Prewedding Photoshoot</span>
+    </div>
+
+    <div class="trend-card">
+      <img src="images/Engagement.jpg" alt="">
+      <span>Engagment Photoshoot</span>
+    </div>
   </div>
 </section>
 
@@ -236,27 +265,28 @@
     <div class="footer-column">
       <h4>Explore</h4>
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
     <div class="footer-column">
       <h4>Connect</h4>
       <div class="social-icons">
-    <a href="https://wa.me/919XXXXXXXXX" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/+919562515202" target="_blank" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
+    <a href="https://www.facebook.com/sopanamphotographyktp" target="_blank" aria-label="Facebook">
         <i class="fa-brands fa-facebook-f"></i>
     </a>
 
-    <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+    <a href="https://www.instagram.com/sopanam_wedding_photography?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
         <i class="fa-brands fa-instagram"></i>
     </a>
+
 </div>
 
     </div>
@@ -284,15 +314,19 @@
 
     <!-- Social Icons -->
     <div class="social-fab-menu">
-        <a href="https://wa.me/919XXXXXXXXX" target="_blank" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
+        <a href="https://wa.me/+919562515202" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="https://www.instagram.com/sopanam_wedding_photography?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+
+    <a href="https://www.facebook.com/sopanamphotographyktp" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    
+    </a>
     </div>
 
 </div>
@@ -302,12 +336,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Your main JS -->
+ <script src="js/navbar-scroll.js"></script>
+
 <script src="js/main.js"></script>
 <script src="js/mobile-nav.js"></script>
 <script src="js/social-fab.js"></script>
 <script src="js/trust-counter.js"></script>
 <script src="js/reveal.js"></script>
-
 
 </body>
 </html>

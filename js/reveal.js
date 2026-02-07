@@ -1,17 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    /* Page load fade */
+    document.body.classList.add("page-loaded");
+
+    /* Scroll reveal */
     const reveals = document.querySelectorAll(".reveal");
 
+    if (!reveals.length) return;
+
     const observer = new IntersectionObserver(
-        entries => {
+        (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
                 }
             });
         },
         {
-            threshold: 0.15
+            threshold: 0.15,
+            rootMargin: "0px 0px -40px 0px"
         }
     );
 

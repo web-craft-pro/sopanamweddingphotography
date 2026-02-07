@@ -2,22 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".stat h3");
     let hasAnimated = false;
 
-    const animateCount = (el, target, duration = 1000) => {
+    const animateCount = (el, target, duration = 1400) => {
         let start = null;
 
         const step = (timestamp) => {
             if (!start) start = timestamp;
+
             const progress = Math.min((timestamp - start) / duration, 1);
 
-            // Ease-out cubic
+            // Ease-out cubic (premium smoothness)
             const eased = 1 - Math.pow(1 - progress, 3);
 
-            el.textContent = Math.floor(eased * target);
+            const current = Math.floor(eased * target);
+            el.textContent = current.toLocaleString();
 
             if (progress < 1) {
                 requestAnimationFrame(step);
             } else {
-                el.textContent = target;
+                // FINAL value — exact from HTML
+                el.textContent = target.toLocaleString() + "+";
             }
         };
 
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         hasAnimated = true;
 
         counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute("data-count"), 10);
+            const target = parseInt(counter.dataset.count, 10); // ✅ FIXED
             animateCount(counter, target);
         });
     };
@@ -41,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.disconnect();
             }
         },
-        { threshold: 0.2 }
+        { threshold: 0.3 }
     );
 
     const trustSection = document.querySelector(".trust-section");

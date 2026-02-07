@@ -1,0 +1,106 @@
+/* =========================
+   HERO – QUOTE ONLY (FINAL)
+   Mobile First
+========================= */
+.hero {
+    position: relative;
+    height: 30vh; /* Mobile default */
+    overflow: hidden;
+}
+
+/* Slideshow background */
+.slideshow img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+/* Dark cinematic overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+/* Centered quote container */
+.hero-quote-only {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+/* Quote styling */
+/* =========================
+   HOME HERO QUOTE – FINAL
+========================= */
+
+.hero-quote {
+    font-family: 'Great Vibes', cursive;   /* romantic & premium */
+    font-size: 6.6rem;
+    font-weight: 400;
+    color: #ffffff;
+
+    letter-spacing: 2px;
+    line-height: 1.3;
+    text-align: center;
+
+    text-shadow: 
+        0 4px 18px rgba(0, 0, 0, 0.45);  /* cinematic depth */
+}
+
+/* =========================
+   DESKTOP ONLY
+========================= */
+@media (min-width: 992px) {
+    .hero {
+        height: 100vh;
+    }
+}
+
+/* =========================
+   TABLET & MOBILE
+========================= */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero-quote {
+        font-size: 1.375rem; /* 22px */
+        line-height: 1.6;
+        max-width: 90%;
+        padding: 0 1rem;
+    }
+
+    .hero-quote span {
+        font-size: 0.8125rem; /* 13px */
+    }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+@media (max-width: 480px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-quote {
+        font-size: 1.125rem;
+    }
+}

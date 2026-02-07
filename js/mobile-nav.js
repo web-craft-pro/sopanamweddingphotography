@@ -26,23 +26,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
-    /* =========================
-       HOME NAVBAR SCROLL EFFECT
-    ========================= */
-
-    const navbar = document.querySelector(".home-page .navbar");
-
-    if (navbar) {
-        const toggleNavbar = () => {
-            if (window.scrollY > 60) {
-                navbar.classList.add("navbar-scrolled");
-            } else {
-                navbar.classList.remove("navbar-scrolled");
-            }
-        };
-
-        toggleNavbar(); // run once on load
-        window.addEventListener("scroll", toggleNavbar);
-    }
 });

@@ -1,0 +1,138 @@
+/* =========================
+   WHATSAPP FLOATING BUTTON
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    z-index: 99999;
+
+    background-color: transparent; /* ✅ Transparent */
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Font Awesome icon */
+.whatsapp-float i {
+    font-size: 50px;
+    color: #25D366;
+}
+
+/* Hover effect */
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   SOCIAL FLOATING STACK
+========================= */
+
+.social-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 99999;
+}
+
+/* Main button */
+.social-fab-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+
+    box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-fab-toggle i {
+    font-size: 32px;
+    color: #060606;
+    transition: transform 0.3s ease;
+}
+
+/* Menu */
+.social-fab-menu {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* Icons */
+.social-fab-menu a {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.social-fab-menu i {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+/* Brand colors */
+.social-fab-menu a:nth-child(1) i { color: #25D366; } /* WhatsApp */
+.social-fab-menu a:nth-child(2) i { color: #E1306C; } /* Instagram */
+.social-fab-menu a:nth-child(3) i { color: #1877F2; } /* Facebook */
+
+/* Active state */
+.social-fab.open .social-fab-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.social-fab.open .social-fab-toggle i {
+    transform: rotate(45deg);
+}
+
+/* =========================
+   MOBILE ADJUSTMENTS
+========================= */
+
+@media (max-width: 768px) {
+
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .whatsapp-float i {
+        font-size: 35px;
+    }
+}

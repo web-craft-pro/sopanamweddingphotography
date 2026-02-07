@@ -1,0 +1,260 @@
+/* =========================
+   MOBILE NAVBAR (HOME)
+========================= */
+
+.mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #b09b9b;
+}
+
+/* Mobile nav panel */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    padding: 15px 20px;
+
+    z-index: 9999;
+}
+
+.mobile-nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+
+/* =========================
+   MOBILE ONLY BEHAVIOR
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Hide desktop menu */
+    .navbar ul {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    /* Move navbar above hero */
+    .home-page .navbar {
+        padding: 15px 20px;
+    }
+
+    /* Prevent hero overlap */
+    .hero-quote-only {
+        padding-top: 80px;
+    }
+}
+
+/* =========================
+   MOBILE MENU – FIXED TOP RIGHT
+========================= */
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* Overlay */
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 10000;
+}
+
+/* Menu Box */
+.mobile-nav-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 220px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Close Button */
+.mobile-nav-close {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    cursor: pointer;
+}
+
+/* Links */
+.mobile-nav-links {
+    margin-top: 30px;
+}
+
+.mobile-nav-links a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+
+/* =========================
+   MOBILE ONLY
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Hide desktop menu */
+    .navbar ul {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 18px;
+        right: 20px;
+
+        z-index: 10001;
+        font-size: 22px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
+
+/* =========================
+   MOBILE MENU – FULL SCREEN
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Hide desktop nav */
+    .navbar ul {
+        display: none;
+    }
+
+    /* Hamburger button */
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 18px;
+        right: 20px;
+        z-index: 10001;
+
+        font-size: 22px;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    /* Full-screen overlay */
+    .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+
+        background: rgba(255, 255, 255, 0.92);
+        z-index: 10000;
+    }
+
+    /* Full-screen menu container */
+    .mobile-nav-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Close button */
+    .mobile-nav-close {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+
+        background: none;
+        border: none;
+        color: #000000;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    /* Nav links */
+    .mobile-nav-links a {
+        display: block;
+        margin: 18px 0;
+
+        font-family: 'Playfair Display', serif;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+/* =========================
+   DESKTOP SAFETY
+========================= */
+
+@media (min-width: 769px) {
+    .mobile-menu-toggle,
+    .mobile-nav-overlay {
+        display: none !important;
+    }
+
+    .navbar ul {
+        display: flex !important;
+    }
+}
+
+/* =========================
+   MOBILE LOGO – TOP LEFT IN SMART PHONE
+========================= */
+
+@media (max-width: 768px) {
+
+    .logo {
+        position: fixed;
+        top: 14px;
+        left: 16px;
+        z-index: 10001;
+    }
+
+    .logo img {
+        max-height: 42px;
+        width: auto;
+    }
+}
+
+/* =========================
+   HIDE HAMBURGER WHEN MENU OPEN
+========================= */
+
+@media (max-width: 768px) {
+    body.mobile-menu-open .mobile-menu-toggle {
+        display: none !important;
+    }
+}
